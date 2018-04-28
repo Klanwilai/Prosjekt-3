@@ -9,6 +9,7 @@ var heading = [0, 90, 180, 270];    //degrees for heading when geetting street v
 /**
  *  Loads the google map, but only if the API is fully loaded
  *  also adds functionality for when you click on the map
+ *  Credit: Got it from Kolloens lectures.
  */
 window.addEventListener("load", e => {
     loadGoogleMapAPI().then(() => {
@@ -27,6 +28,7 @@ window.addEventListener("load", e => {
 /**
  * Displays adress and streetview pictures on the webpage
  * takes @param info as parameter, info being the coordinates of where you clicked on the map.
+ * Credit: Got most of this from Kolloens lectures
  */
 function showInfo(info){
     console.log(info);
@@ -45,6 +47,7 @@ function showInfo(info){
 /**
  * function that loads the API
  * @return Promise which resolves if API is loaded.
+ * Credit: got this code from Kolloens lectures
  */
 function loadGoogleMapAPI() {
     return new Promise((resolve, reject) => {

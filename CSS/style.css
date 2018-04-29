@@ -1,4 +1,26 @@
+/*General styling*/
 
+
+body {
+    color: Red;
+    background-color: Lime;
+}
+
+.main-body, header, footer {
+    width: 960px;
+    margin: 45px auto 0 auto;
+}
+
+.main-body {
+    display: grid;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*CSS that styles the map page*/
 
 #map {
     background: transparent;
@@ -30,20 +52,6 @@
     grid-column-start: 2;
 }
 
-body {
-    color: Red;
-    background-color: Lime;
-}
-
-.main-body, header, footer {
-    width: 960px;
-    margin: 45px auto 0 auto;
-}
-
-.main-body {
-    display: grid;
-}
-
 .map-body {
     display: grid;
     grid-row: 2;
@@ -66,8 +74,14 @@ body {
     grid-column: 2;
 }
 
+/*CSS that styles the user page*/
+
 .user-body-container {
     grid-row: auto;
+    /* This is where scroll is implemented */
+    overflow-y: scroll;
+    height: 50vh;
+    background-color: lightGreen;
 }
 
 .user-body {
@@ -79,7 +93,6 @@ body {
 
 .user-image {
     width: 200px;
-    border: 2px solid red;
     grid-column-start: 1;
 }
 
@@ -87,7 +100,6 @@ body {
     width: 300px;
     text-align: left;
     grid-column-start: 2;
-    border: 2px solid blue;
     font-size: 18px;
     text-transform: capitalize;
 }
@@ -95,3 +107,5 @@ body {
 .email {
     text-transform: lowercase;
 }
+
+/*CSS that styles the postget page*/

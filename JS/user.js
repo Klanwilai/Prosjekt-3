@@ -2,9 +2,6 @@ let html = "";
 var test;
 let users = [];
 
-
-
-
 class user {
     constructor(fetchData, i) {
         this.name = fetchData.results[i].name;
@@ -16,9 +13,9 @@ class user {
 
     displayUser(dataToHTML) {
         dataToHTML = `<div class="user-body"><img src="${this.picture}" class="user-image">
-                <ul class="user-info"><li>${this.name.title}: ${this.name.first} ${this.name.last}</li>
-                <li class="email">${this.email}</li>
-                <li>${this.adress.city} ${this.adress.postcode} ${this.adress.state} ${this.adress.street}</li></ul></div>`
+                <ul class="user-info"><li>Name: ${this.name.first} ${this.name.last}</li>
+                <li class="email">e-mail: ${this.email}</li>
+                <li>Adress: ${this.adress.city} ${this.adress.postcode} ${this.adress.state} ${this.adress.street}</li></ul></div>`
         return dataToHTML;
     }
 }
@@ -34,10 +31,7 @@ window.addEventListener("load", e => {
             html += users[i].displayUser();
         }
 
-        // test = test.toHTML(users[0]);
-        // html = html.filter(content => content != " ");
         document.querySelector(".user-body-container").innerHTML = html;
-        // document.querySelector("img").src = data.results[0].picture.large;
-        // console.log(data.results[0].location);
+
     });
 });

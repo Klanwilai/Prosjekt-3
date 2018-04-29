@@ -3,7 +3,7 @@ var map;
 var mapElement = document.querySelector("#map");
 var mapInfo = document.querySelector("#map-info");
 var streetImg = document.querySelector("#img");
-var heading = [0, 90, 180, 270];    //degrees for heading when geetting street view images
+var heading = [0, 90, 180, 270];    //degrees for heading when geetting street view images, credit: got the idea from Martin
 
 
 /**

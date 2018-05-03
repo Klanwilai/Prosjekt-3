@@ -14,15 +14,18 @@
 
     <div class="main-body">
         <div class="pg-container">
-            <form class="" action="http://folk.ntnu.no/oeivindk/imt1441/echo.php" method="post">
+            <form class="" onsubmit="javascript:return false;">
                 Name: <input type="text" name="name" value=""><br>
-                Adress: <input type="text" name="adress" value="">
+                Street: <input type="text" name="street" value=""><br>
+                Postal code: <input type="text" name="postal" value="">
+                Area: <input type="text" name="area" value="">
 
-                Post<input type="radio" name="Post" value="">
-                Get<input type="radio" name="Get" value=""><br>
-                <button type="button" name="button">Submit</button>
+                Post<input type="radio" name="PG" value="POST" checked="checked" id="POST">
+                Get<input type="radio" name="PG" value="GET" id="GET"><br>
+                <button type="submit" name="button">Submit</button>
             </form>
 
+            <div class="pg-output"></div>
         </div>
     </div>
 

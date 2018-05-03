@@ -86,7 +86,7 @@ ul {
 
 .user-body {
     display: grid;
-    width: 680px;
+    width: 956px;
     grid-column: 2;
     border: 2px solid black;
 }
@@ -109,3 +109,8 @@ ul {
 }
 
 /*CSS that styles the postget page*/
+
+.pg-output {
+    height: 200px;
+    border: 2px solid grey;
+}

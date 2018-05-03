@@ -15,6 +15,7 @@ window.addEventListener("load", e => {
     loadGoogleMapAPI().then(() => {
             console.log("map API loaded");
             map = new google.maps.Map(mapElement, {
+                // Roughly the coordinates to NTNU
                 center: {lat: 60.79, lng: 10.6843},
                 zoom: 14,
             });

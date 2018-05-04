@@ -1,5 +1,7 @@
-var images = ["Images/lime01.jpg", "Images/lime02.jpg", "Images/lime03.jpg"];
-var currentImage = 0;
+/* All code taken from kolloens lecture */
+
+const images = ["Images/lime01.jpg", "Images/lime02.jpg", "Images/lime03.jpg"];
+let currentImage = 0;
 
 
 /**
@@ -18,11 +20,15 @@ function loadImage() {
     var img = document.createElement("img");
     img.addEventListener("load", e => {
         document.querySelector("#slide1").src = img.src;
-        window.setTimeout(slideshow, 2000);
+        setTimeout(slideshow, 2000);
     });
     img.src = images[0];
 }
 
+/**
+ * This function adds to currentImage count unless, current image is the same as the amount of Images
+ * Then currentImage i reset to 0
+ */
 function slideshow() {
     currentImage++;
     if(currentImage === images.length) {
@@ -31,15 +37,23 @@ function slideshow() {
     document.querySelector("#slide2").src = images[currentImage];
 }
 
+
+/**
+ * When slide2 is loaded, set opacity to 1
+ */
 document.querySelector("#slide2").addEventListener("load", e => {
     document.querySelector("#slide2").style.opacity = 1;
 });
 
-document.querySelector("#slide2").addEventListener("transitioned", e => {
+/**
+ * When slide 2 has transitioned, set slide1 source to be slide2 source
+ * if slide2 opacity is 1, set it to be 0
+ */
+document.querySelector("#slide2").addEventListener("transitionend", e => {
     document.querySelector("#slide1").src = document.querySelector("#slide2").src;
 
     if(document.querySelector("#slide2").style.opacity == 1) {
         document.querySelector("#slide2").style.opacity = 0;
-        window.setTimeout(slideshow, 2000);
+        setTimeout(slideshow, 2000);
     }
 });

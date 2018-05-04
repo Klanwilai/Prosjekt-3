@@ -1,12 +1,11 @@
 /*General styling*/
 
-
 body {
     color: Red;
     background-color: Lime;
 }
 
-.main-body, header, footer {
+.main-body, h1 {
     width: 960px;
     margin: 45px auto 0 auto;
 }
@@ -17,10 +16,39 @@ body {
 
 ul {
     list-style: none;
+    margin-left: 185px;
 }
 
+/*CSS that styles the navbar*/
+
+.navbar {
+  overflow: hidden;
+  background-color: DarkGreen;
+  border: 2px solid brown;
+
+  position: fixed;               /* Fixes navbar to the top */
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  font-size: 20px;                  /* decides how the menu elements in the navbar looks */
+  float: left;
+  text-align: center;
+  padding: 10px 20px;
+  color: Red;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: DarkGrey;
+}
 
 /*CSS that styles the map page*/
+
+h1 {
+    margin-top: 100px;
+}
 
 #map {
     background: transparent;
@@ -112,5 +140,27 @@ ul {
 
 .pg-output {
     height: 200px;
-    border: 2px solid grey;
+    white-space: pre;
+}
+
+/*CSS that styles the index(slideshow) page*/
+
+#slide1, #slide2 {
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#slide2 {
+    z-index: 2;
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+.slideshow-container {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 430px;
 }
